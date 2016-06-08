@@ -1,4 +1,4 @@
-# poloniex-holdings-tracker
+# Poloniex Holdings Tracker
 
 ATTENTION: It is recommended that you change your poloniex API key used by this script to NOT have trading or withdrawal permissions. This way you can be a little less paranoid about the fact that the config file stores this info in plain-text.
 
