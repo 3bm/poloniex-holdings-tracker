@@ -101,8 +101,11 @@ def main():
     for row in table:
         print ("{: >5} |{: >10} |{: >10} |{: >10}".format(*row))
 
-    print "writing new values to file"
+    print "Writing new values to file."
     pickle.dump(current_values, open("last_values.p", 'wb'))
+    
+    print "New values written. Press enter to quit."
     raw_input()
+    
 
 main()
