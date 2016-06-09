@@ -42,8 +42,7 @@ def main():
 
     print "fetching info"
     ticker = p.returnTicker()
-    balances = p.returnCompleteBalances()    
-    print
+    balances = p.returnCompleteBalances()
     print
 
     btc_price = float(ticker['USDT_BTC']['last'])
