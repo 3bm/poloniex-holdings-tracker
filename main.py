@@ -42,7 +42,8 @@ def main():
 
     print "fetching info"
     ticker = p.returnTicker()
-    balances = p.returnBalances()
+    balances = p.returnCompleteBalances()    
+    print
     print
 
     btc_price = float(ticker['USDT_BTC']['last'])
@@ -70,7 +71,7 @@ def main():
         else:
             btc_value = 1
 
-        balance = float(balances[coin_label]) + external_balance
+        balance = float(balances[coin_label]["available"]) + float(balances[coin_label]["onOrders"]) + external_balance
             
         usd_value = btc_value*btc_price*balance
         external_usd_value = btc_value*btc_price*external_balance
